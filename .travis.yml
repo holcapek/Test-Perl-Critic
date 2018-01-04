@@ -11,18 +11,6 @@ perl:
     - "5.12"
     - "5.10"
 
-notifications:
-    email:
-        recipients:
-            - andy@petdance.com
-        on_success: change
-        on_failure: always
-    irc:
-        channels:
-            - "irc.perl.org#perlcritic"
-        template:
-            - "%{branch}: %{message} %{build_url}"
-
 script:
    - export HARNESS_OPTIONS='j:c'
    - perl Build.PL
